@@ -60,4 +60,4 @@ if __name__ == "__main__":
     app.add_handler(CommandHandler("relatorio", relatorio))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, msg))
     print("Bot iniciado - polling...")
-    app.run_polling()
+    app.run_polling(drop_pending_updates=True)
